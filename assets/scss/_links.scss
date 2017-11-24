@@ -1,0 +1,31 @@
+/* Links */
+
+.links{
+  &.inline{
+    li{
+      display: inline-block;
+    }
+  }
+
+  li{
+    &.delete{
+      width: auto;
+      background-color: transparent;
+
+      &::after,
+      &::before{
+        content: none;
+      }
+
+      a{
+        color: $red;
+      }
+    }
+
+    &.disable{
+      a{
+        color: $orange;
+      }
+    }
+  }
+}

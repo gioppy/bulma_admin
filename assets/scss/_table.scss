@@ -1,0 +1,41 @@
+/* Table */
+
+span{
+  &.admin-disabled{
+    color: $danger;
+  }
+
+  &.admin-enabled{
+    color: $success;
+  }
+}
+
+.table{
+  th{
+    &.checkbox{
+      display: table-cell;
+    }
+  }
+
+  tr{
+    &.even,
+    &.odd{
+      background-color: transparent;
+      border-bottom: none;
+      padding: 0;
+    }
+  }
+
+  td{
+    vertical-align: middle;
+
+    &.checkbox,
+    &.help{
+      display: table-cell;
+    }
+
+    &.active{
+      background-color: inherit;
+    }
+  }
+}

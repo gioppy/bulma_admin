@@ -1,0 +1,22 @@
+name = Bulma Admin
+description = Bulma CSS framwork used as Drupal 7 admin theme
+package = Core
+core = 7.x
+
+stylesheets[all][] = assets/styles/admin.min.css
+
+scripts[] = assets/scripts/admin.min.js
+scripts[] = assets/scripts/collapse.min.js
+scripts[] = assets/scripts/vertical-tabs.min.js
+
+regions[help] = Help
+regions[highlighted] = Highlighted
+regions[content] = Content
+regions[sidebar_first] = Sidebar First
+regions[sidebar_second] = Sidebar Second
+regions[header] = Header
+regions[footer] = Footer
+
+; CDN
+; --------------
+settings[bulma_admin_cdn] = 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css'

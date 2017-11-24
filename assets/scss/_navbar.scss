@@ -1,0 +1,52 @@
+// NavBar
+
+.ba__navbar-start--small{
+  font-size: 0.85em;
+}
+
+.hero{
+  &.is-info{
+    .ba-nav--no-shadow{
+      box-shadow: none;
+    }
+  }
+}
+
+//.navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown
+
+/*
+.navbar-item{
+  &.is-active,
+  &.is-hoverable:hover{
+    .navbar-dropdown{
+      display: none;
+    }
+
+    > .navbar-dropdown{
+      display: block;
+
+      .expanded{
+        position: relative;
+
+        > a{
+          display: flex;
+          padding-right: 1rem;
+          justify-content: space-between;
+
+          &::after{
+            content: '›';
+          }
+        }
+
+        &:hover {
+          > .navbar-dropdown{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 100%;
+          }
+        }
+      }
+    }
+  }
+}*/

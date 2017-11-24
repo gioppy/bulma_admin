@@ -1,0 +1,336 @@
+/**
+ * @file
+ * system.base.css
+ */
+
+
+/**
+ * Autocomplete.
+ *
+ * @see autocomplete.js
+ */
+#autocomplete {
+  border: 1px solid;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  
+  ul {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    background: #fff;
+    color: #000;
+    cursor: default;
+    white-space: pre;
+    zoom: 1; /* IE7 */
+  }
+}
+
+html{
+  &.js{
+    // Animated throbber
+    input{
+      &.form-autocomplete {
+        background-image: url(../images/misc/throbber-inactive.png);
+        background-position: 100% center; /* LTR */
+        background-repeat: no-repeat;
+      }
+      
+      &.throbbing {
+        background-image: url(../images/misc/throbber-active.gif);
+        background-position: 100% center; /* LTR */
+      }
+    }
+    
+    //Collapsible fieldsets
+    fieldset{
+      &.collapsed {
+        border-bottom-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+        height: 1em;
+        
+        .fieldset-wrapper {display: none;}
+      }
+      
+      &.collapsible {
+        position: relative;
+        
+        .fieldset-legend {display: block;}
+      }
+    }
+    
+    .js-hide {display: none;}
+  }
+}
+
+/**
+ * Resizable textareas.
+ *
+ * @see textarea.js
+ */
+.form-textarea-wrapper{
+  textarea {
+    display: block;
+    margin: 0;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .grippie {
+    background: #eee url(../images/misc/grippie.png) no-repeat center 2px;
+    border: 1px solid #ddd;
+    border-top-width: 0;
+    cursor: s-resize;
+    height: 9px;
+    overflow: hidden;
+  }
+}
+
+/**
+ * TableDrag behavior.
+ *
+ * @see tabledrag.js
+ */
+body.drag {cursor: move;}
+
+.draggable a.tabledrag-handle {
+  cursor: move;
+  float: left; /* LTR */
+  height: 1.7em;
+  margin-left: -1em; /* LTR */
+  overflow: hidden;
+  text-decoration: none;
+}
+
+a{
+  &.tabledrag-handle{
+    &:hover {text-decoration: none;}
+    
+    .handle {
+      background: url(../images/misc/draggable.png) no-repeat 6px 9px;
+      height: 13px;
+      margin: -0.4em 0.5em; /* LTR */
+      padding: 0.42em 0.5em; /* LTR */
+      width: 13px;
+    }
+  }
+  
+  &.tabledrag-handle-hover{
+    .handle {background-position: 6px -11px;}
+  }
+}
+
+.tabledrag-toggle-weight-wrapper {
+  text-align: right; /* LTR */
+}
+
+div{
+  &.indentation {
+    float: left; /* LTR */
+    height: 1.7em;
+    margin: -0.4em 0.2em -0.4em -0.4em; /* LTR */
+    padding: 0.42em 0 0.42em 0.6em; /* LTR */
+    width: 20px;
+  }
+  
+  &.tree-child {background: url(../images/misc/tree.png) no-repeat 11px center; /* LTR */}
+  
+  &.tree-child-last {background: url(../images/misc/tree-bottom.png) no-repeat 11px center; /* LTR */}
+  
+  &.tree-child-horizontal {background: url(../images/misc/tree.png) no-repeat -11px center;}
+}
+
+/**
+ * TableHeader behavior.
+ *
+ * @see tableheader.js
+ */
+table.sticky-header {
+  background-color: #fff;
+  margin-top: 0;
+}
+
+/**
+ * Progress behavior.
+ *
+ * @see progress.js
+ */
+.progress{
+  .bar {
+    background-color: #fff;
+    border: 1px solid;
+  }
+  
+  .filled {
+    background-color: #000;
+    height: 1.5em;
+    width: 5px;
+  }
+  
+  .percentage {float: right; /* LTR */}
+}
+
+/* Throbber */
+.ajax-progress {
+  display: inline-block;
+  
+  .throbber {
+    background: transparent url(../images/misc/throbber-active.gif) no-repeat 0px center;
+    float: left; /* LTR */
+    height: 15px;
+    margin: 2px;
+    width: 15px;
+    
+    tr & {
+      margin: 0 2px;
+    }
+  }
+  
+  .message {
+    padding-left: 20px;
+  }
+}
+
+.ajax-progress-bar {
+  width: 16em;
+}
+
+/**
+ * Inline items.
+ */
+.container-inline{
+  div, label{display: inline;}
+  
+  .fieldset-wrapper {display: block;}
+}
+
+/**
+ * Prevent text wrapping.
+ */
+.nowrap {
+  white-space: nowrap;
+}
+
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be a collapsible fieldset that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+.element-hidden {
+  display: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user.
+ * "!important" is used to prevent unintentional overrides.
+ */
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  
+  &.element-focusable:active,
+  &.element-focusable:focus {
+    position: static !important;
+    clip: auto;
+    overflow: visible;
+    height: auto;
+  }
+}
+
+/**
+ * Markup free clearing.
+ *
+ * @see http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+ */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/*TABS*/
+
+.tabs-wrapper{
+  margin:21px auto;
+  font-size:1.1em;
+  text-transform:uppercase;
+  
+  ul{
+    display:block;
+    height:18px;
+    border-bottom:1px solid #000;
+    padding:8px 33px;
+  }
+  
+  li{
+    margin:0 15px 0 0;
+    display:block;
+    float:left;
+    
+    &.active a{
+      padding-bottom:10px;
+      color:#000;
+      border-bottom-color:#fff;
+    }
+  }
+  
+  a{
+    background:#fff;
+    color:#000;
+    border-width:1px;
+    border-style:solid;
+    border-color:#000 #000 transparent #000;
+    padding:9px;
+    margin:0;
+    
+    &:hover,
+    &:focus{
+      padding-bottom:10px;
+      color:#000;
+      border-bottom-color:#fff;
+    }
+  }
+}
+
+/*MESSAGES*/
+
+#messages{
+  width:855px;
+  margin:0 0 24px 0;
+  padding:24px 0;
+  position:relative;
+}
+
+div.status,
+div.error,
+div.warning{
+  background-image:none;
+  border:none;
+  margin:0;
+  padding:0 30px;
+}
+
+//customize messagess as your design need
+div.status:before{}
+div.warning:before{}
+div.error:before{}

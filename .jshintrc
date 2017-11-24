@@ -1,0 +1,10 @@
+{
+  "bitwise": true,
+  "camelcase": true,
+  "eqeqeq": true,
+  "latedef": true,
+  "noempty": true,
+  "unused": true,
+  "strict": true,
+  "esversion": 6
+}

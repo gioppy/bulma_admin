@@ -1,0 +1,35 @@
+/* Table Drag */
+
+.draggable{
+  a{
+    &.tabledrag-handle{
+      height: auto;
+      margin-left: 0;
+      color: $grey;
+
+      &:hover {text-decoration: none;}
+
+      .handle {
+        background: none;
+        height: 21px;
+        margin: 0;
+        padding: 0;
+        width: 21px;
+
+        &::before{
+          content: '\f047';
+          font-family: 'FontAwesome';
+          font-size: 0.9em;
+        }
+      }
+    }
+
+    &.tabledrag-handle-hover{
+      .handle {background-position: 6px -11px;}
+    }
+  }
+}
+
+.tabledrag-toggle-weight-wrapper {
+  text-align: right; /* LTR */
+}

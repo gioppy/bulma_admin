@@ -1,0 +1,88 @@
+/* Jquery UI */
+
+.ui-widget{
+  font-family: inherit;
+}
+
+.ui-widget-header{
+  border: none;
+  background-image: none;
+  background-color: $info;
+}
+
+.ui-dialog{
+  box-shadow: 0 0 3px $grey;
+
+  .ui-dialog-title{
+    font-size: $size-5;
+    color: $white;
+  }
+
+  .ui-dialog-titlebar-close{
+    right: .3rem;
+    border: none;
+    box-shadow: none;
+    background: none;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+
+    span {
+      display: none;
+    }
+
+    &::before{
+      content: "\f057";
+      font-family: 'FontAwesome';
+      font-size: $size-4;
+      color: $white;
+    }
+  }
+}
+
+.ui-tabs{
+  .ui-tabs-nav{
+    li{
+      margin: 0;
+      border: none;
+      position: static;
+      float: none;
+
+      &.ui-tabs-selected{
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default{
+  border: none;
+  background: none;
+  color: inherit;
+  font-weight: inherit;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active{
+  background-color: $primary;
+
+  a{
+    color: $white;
+    border-color: $primary;
+  }
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus{
+  font-weight: inherit;
+}

@@ -1,0 +1,68 @@
+/* Views */
+
+.ctools-dropbutton-processed{
+  padding-right: 0;
+}
+
+.views-display-top{
+  background-color: $light;
+}
+
+.views-ui-display-tab-bucket{
+  h3 {
+    min-height: 40px;
+  }
+
+  > h3{
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+  }
+
+  + .views-ui-display-tab-bucket{
+    padding: inherit;
+    background-color: inherit;
+  }
+}
+
+.views-filterable-options{
+  .form-type-checkbox{
+    border-left: none;
+    border-right: none;
+  }
+
+  .even{
+    .form-type-checkbox{
+      background-color: $light;
+    }
+  }
+}
+
+.views-ui-dialog{
+  font-size: inherit;
+
+  #views-ajax-title,
+  .views-override{
+    background-color: $primary;
+    font-size: $size-5;
+    color: $white;
+  }
+
+  .scroll{
+    border: none
+  }
+
+  .form-buttons{
+    background-color: inherit;
+  }
+}
+
+.views-exposed-form{
+  .views-exposed-widget{
+    .form-submit{
+      margin-top: 1.5rem;
+    }
+  }
+}

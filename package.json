@@ -1,0 +1,34 @@
+{
+  "name": "starter-html",
+  "version": "1.0.0",
+  "description": "Starter HTML Gulp utility",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "@types/jquery": "^3.2.12",
+    "autoprefixer": "^6.4.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-typescript": "^3.2.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.11",
+    "jshint": "^2.9.3",
+    "run-sequence": "^1.2.2",
+    "typescript": "^2.4.2",
+    "yargs": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp watch",
+    "build": "gulp"
+  },
+  "author": "gioppy <tech@giovannibuffa.it>",
+  "license": "ISC"
+}

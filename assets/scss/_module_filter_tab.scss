@@ -1,0 +1,35 @@
+/* Module Filter */
+
+html{
+  &.js{
+    .module-filter-inputs-wrapper{
+      input[name="module_filter[name]"]{
+        width: 100%;
+      }
+    }
+  }
+}
+
+#module-filter-modules{
+  table{
+    tr{
+      &.enabling{
+        color: $success;
+      }
+
+      &.disabling{
+        color: $danger;
+      }
+    }
+  }
+}
+
+.admin-operations{
+  a{
+    &.module-link{
+      background-image: none;
+      display: inherit;
+      padding: .375rem 1rem;
+    }
+  }
+}

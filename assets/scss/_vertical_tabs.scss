@@ -1,0 +1,12 @@
+/* Vertical Tabs */
+
+.vertical-tabs{
+  ul{
+    &.vertical-tabs-list{
+      li{
+        background-color: $white-ter;
+        border-color: $grey-lighter;
+      }
+    }
+  }
+}

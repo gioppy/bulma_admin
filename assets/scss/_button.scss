@@ -1,0 +1,7 @@
+/* Button */
+
+.button{
+  &.is-static{
+    pointer-events: auto;
+  }
+}

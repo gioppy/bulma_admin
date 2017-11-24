@@ -1,0 +1,15 @@
+/* Ctools */
+
+div.ctools-modal-content{
+  border-color: $light;
+  border-radius: $radius;
+  box-shadow: 0 0 4px $light;
+
+  .modal-header{
+    background-color: $info;
+  }
+
+  .modal-title{
+    font-size: $size-5;
+  }
+}
